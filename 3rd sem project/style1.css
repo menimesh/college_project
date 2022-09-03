@@ -1,0 +1,35 @@
+.logo{
+    text-align: center;
+}
+.img{
+    text-align: center;
+  
+}
+.navigation a:hover{
+    background-color: #6f95f8;
+   border-radius: 3px;
+}
+.navigation a{
+    color: black;
+    font-family: 'Poppins';
+    text-decoration: none;
+    margin: 50px;
+}
+.navigation{
+    text-align: center;
+    height: 40px;
+    padding: 5px;
+    border-radius: 13px;
+}
+#txt{
+
+text-align: center;
+
+}
+#txt p{
+    font-weight: 100;
+}
+footer{
+    text-align: center;
+  }
+  

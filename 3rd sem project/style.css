@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:0,200,300,400,500,60,700|Roboto:300,400,500,700,900&amp;display=swap");
+*{
+ background-color: white;
+}
+body{
+    font-family: 'Poopins';
+}
+.logo{
+    text-align: center;
+}
+.navigation a:hover{
+    background-color: #6f95f8;
+   border-radius: 3px;
+}
+.navigation a{
+    color: black;
+    font-family: 'Poppins';
+    text-decoration: none;
+    margin: 50px;
+}
+.navigation{
+    text-align: center;
+    height: 40px;
+    padding: 5px;
+    border-radius: 13px;
+}
+.img{
+    text-align: center;
+}
+
+.list h2{
+    background-color: cornsilk;
+    text-decoration: underline;
+    margin-top: -1px;
+    margin-left: -40px;
+}
+.list ul h2::first-letter{
+    font-size: 320%;
+    
+}
+.list ul{
+    margin-left: 200px;
+    height: 423px;
+    border: 2px solid white;
+    width: 50%;
+    border-radius: 4px;
+    float: left;
+}
+.list ul li{
+    font-size: 20px;
+    list-style-type: circle;
+}
+.list ul li:hover{
+    color: coral;
+    cursor: pointer;
+}
+.list ul p{
+    font-size: 15px;
+}
+.table{
+    margin-top: 50px;
+}
+table, td, th{
+	padding: 20px;
+	border: 2px solid lightgray;
+	border-collapse: collapse;
+	text-align: center;
+	cursor: pointer;
+}
+td{
+	font-size: 18px;
+}
+th{
+	background-color: cornsilk;
+	color: black;
+}
+th:hover{
+    color: coral;
+}
+tr:nth-child(odd):hover{
+	color: coral;  
+}
+tr:nth-child(even):hover{	
+	color: coral;
+}
+.list{
+    margin-top: 40px;
+
+}
+.table h2{
+    text-decoration: underline;
+    margin-bottom: -4px;
+}
+iframe{
+margin-left: 160px;
+}
+.social{
+   
+    margin-top: 25px;
+   margin-left: 600px;
+}
+
+iframe{
+    margin-left: 250px;
+}
+
+footer{
+  text-align: center;
+}
+.social a{
+
+padding: 25px;
+}

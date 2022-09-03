@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style2.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="logo">
+        <img src="logo-clz.png" alt="" width="350px" height="250px">
+    </div>
+    <nav class="navigation">
+        <a href="index.html">Home</a>
+        <a href="#Form">Contact</a>
+        <a href="about.html">About us</a>
+    </nav>
+<div class="img">
+   <img src="clz2.jpg" alt="">
+</div>
+<div class="form">
+
+    <h2>Registration form</h2>  
+    <form onsubmit="return hi()">
+        <fieldset><div class="full">
+            
+    <legend class="head">User personal information</legend>  
+    <label>Enter your full name</label><br>  
+    <input type="text" name="name" id="txtname" required/><span id="cname"></span><br>
+   <label>Enter your email</label><br>  
+   <input type="email" name="email" id="ema" required/><span id="cema"></span><br>  
+   <label>Enter your password</label><br>  
+     <input type="password" name="pass" id="pss" required/><span id="epss"></span><br>  
+     <label>confirm your password</label><br>  
+     <input type="password" name="pass" id="psss" required><span id="epss1"></span><br>  
+     <br><label>Enter your gender</label><br>  
+     <input type="radio" id="genderr" name="gender" value="male"/>Male  <br>  
+     <input type="radio" id="genderrr" name="gender" value="female"/>Female <br/>    
+     <input type="radio" id="genderrrr" name="gender" value="others"/>others <br/>   
+      <br>Enter your Address:<br>  
+     <textarea></textarea><br>  
+     <input type="submit" name="submit" >
+     </form>
+    </div>
+    <div class="social">
+    
+        <a class="contact" href="https://www.facebook.com/kcmit2000">
+            <i class="fab fa-facebook-square fa-3x" ></i>
+        </a>
+        <a class="email" href="mailto:info@kcmit.edu.np">
+            <i class="fas fa-envelope fa-3x"></i>
+        </a>
+        <a href="https://www.instagram.com/kcmit/">
+            <i class="fab fa-instagram fa-3x"></i>
+        </a>
+        <a href="">
+            <i class="fab fa-linkedin fa-3x"></i>
+     </a>
+    </div>
+    <footer>&copy nimeshkhatiwada</footer>
+    </body>
+    <script>
+        function hi(){
+            /*name validation*/
+            let namee=document.getElementById('txtname').value;
+            let email=document.getElementById('ema').value;
+            let psw=document.getElementById('pss').value;
+            let rpsw=document.getElementById('psss').value;
+
+
+            if(!isNaN(namee))
+            {
+                document.getElementById('cname').innerHTML="Enter your proper name";
+                return false;
+            }
+            if(namee.length<4)
+            {
+
+                document.getElementById('cname').innerHTML="Enter your proper name";
+                return false;
+            }
+            e=email.indexOf("@gmail.com");
+            if(e==-1){
+                document.getElementById('cema').innerHTML="Please enter your email";
+                return false;
+            }
+            if(email.length<13){
+           document.getElementById('cema').innerHTML="Please enter your email";
+           return false;
+        }
+        lwr=0;
+        for(i=0;i<psw.length;i++)
+        {
+            for(j='a';j<='z';j++)
+            {
+                if(psw.charAt(i)=="j"){
+                    lwr=10;
+                }
+            }
+        }
+        if(lwr==0)
+        {
+            document.getElementById('epss').innerHTML="Password doesn't contain lower case";
+            return false;
+        }
+        upr = 10;
+        //checking upper case
+        for(i=0;i<psw.length;i++)
+        {
+            for(j='A';j<='Z';j++)
+            {
+                if(psw.charAt(i)=="j"){
+                    upr=10;
+                }
+            }
+        }
+      
+        if(upr==0)
+        {
+            document.getElementById('epss').innerHTML="Password doesn't contain upper case";
+            return false;
+        }
+        if(isNaN(psw)){
+            document.getElementById('epss').innerHTML="Password doesn't contain number";
+            return false;
+        }
+        num=0;
+        for(i=0;i<psw.length;i++){
+            if(psw.charAt(i)=='@'||psw.charAt(i)=='#'||psw.charAt(i)=='$'||psw.charAt(i)=='!'||psw.charAt(i)=='+'||psw.charAt(i)=="*"||psw.charAt(i)=='~'){
+            num=10
+            alert("hi")
+            }
+            if(num==0){
+                document.getElementById('epss').innerHTML="Password doesn't contain special character";
+                return false;
+            }
+        }
+        if(!pss===psss){
+            document.getElementById("epss1").innerHTML="Password doesn't match";
+            return false;
+        }
+
+    }
+
+    </script>
+    </html>
